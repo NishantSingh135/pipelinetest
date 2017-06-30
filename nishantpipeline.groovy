@@ -19,6 +19,16 @@ echo 'Deploying....'
 }
        
  def checkout(){  
- 	echo 'inside checkout method'
+ 	checkout([$class: 'GitSCM', 
+ 		branches: [[name: '*/master']], 
+ 		doGenerateSubmoduleConfigurations: false, 
+ 		extensions: [], 
+ 		submoduleCfg: [], 
+ 		userRemoteConfigs: [
+ 		[url: REPOSITORY_URL]
+ 		]
+
+ 		])
+
  }
     
