@@ -1,6 +1,6 @@
 REPOSITORY_URL="https://github.com/NishantSingh135/JenkinDemo"
 // Type of build
-BUILD_TYPE = BUILD_DEBUG;
+BUILD_TYPE = 'BUILD_DEBUG';
 
 node {
 
