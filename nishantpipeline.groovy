@@ -52,5 +52,5 @@ This will build the project
     
  def unitTest(){
  	echo "current directory is :" + pwd()
- 	gradlew "gradlew test"
+ 	bat gradlew "gradlew test"
  }   
