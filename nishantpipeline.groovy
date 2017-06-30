@@ -1,4 +1,6 @@
 REPOSITORY_URL="https://github.com/NishantSingh135/JenkinDemo"
+// Type of build
+BUILD_TYPE = BUILD_DEBUG;
 
 node {
 
@@ -9,6 +11,7 @@ echo('checkout success')
 
 stage'Build' 
 echo 'Building....'
+build()
     
 stage 'Test'  
 echo 'Building....'
@@ -30,5 +33,9 @@ echo 'Deploying....'
 
  		])
 
+ }
+
+ def build(){
+  bat "gradlew clean assemble${BUILD_TYPE}"
  }
     
