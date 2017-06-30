@@ -2,7 +2,7 @@ REPOSITORY_URL="https://github.com/NishantSingh135/JenkinDemo"
 // Type of build
 BUILD_TYPE = 'BUILD_DEBUG';
 
-node {
+node (android_node){
 
 stage 'checkout'  
 echo('checking out source') 
@@ -54,4 +54,5 @@ This will build the project
  	echo "current directory is :" + pwd()
  	bat "gradlew test"
  	junit '**/test-results/testDebugUnitTest/*.xml'
+ 	archiveArtifacts '**/test-results/testDebugUnitTest/*.zip'
  }   
