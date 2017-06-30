@@ -14,13 +14,17 @@ echo 'Building....'
 build()
     
 stage 'Test'  
-echo 'Building....'
+echo 'Testing....'
+unitTest()
     
 stage 'Deploy'  
 echo 'Deploying....'
 
 }
        
+ /*
+ this will checkout the source from git
+ */      
  def checkout(){  
  	checkout([$class: 'GitSCM', 
  		branches: [[name: '*/master']], 
@@ -35,7 +39,18 @@ echo 'Deploying....'
 
  }
 
+/*
+This will build the project
+*/
  def build(){
   bat "gradlew clean assemble"
  }
+
+ /*
+ This will unit test 
+ */
     
+ def unitTest(){
+ 	echo "current directory is :" + pwd()
+ 	gradlew "gradlew test"
+ }   
