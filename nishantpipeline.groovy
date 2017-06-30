@@ -36,6 +36,6 @@ echo 'Deploying....'
  }
 
  def build(){
-  bat "gradlew clean assemble${BUILD_TYPE}"
+  bat "gradlew clean assemble"
  }
     
