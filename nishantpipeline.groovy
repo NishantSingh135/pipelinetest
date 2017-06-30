@@ -14,7 +14,7 @@ echo 'Building....'
 build()
     
 stage 'Test'  
-echo 'Testing....'
+echo 'Test....'
 unitTest()
     
 stage 'Deploy'  
@@ -52,5 +52,5 @@ This will build the project
     
  def unitTest(){
  	echo "current directory is :" + pwd()
- 	bat gradlew "gradlew test"
+ 	bat "gradlew test"
  }   
