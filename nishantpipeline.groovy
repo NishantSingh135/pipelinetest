@@ -3,18 +3,18 @@ REPOSITORY_URL="https://github.com/NishantSingh135/JenkinDemo"
 node {
 
 stage 'checkout'  
-log('checking out source') 
+echo('checking out source') 
 checkout() 
-log('checkout success')
+echo('checkout success')
 
 stage'Build' 
-log 'Building....'
+echo 'Building....'
     
 stage 'Test'  
-log 'Building....'
+echo 'Building....'
     
 stage 'Deploy'  
-log 'Deploying....'
+echo 'Deploying....'
 
 }
        
