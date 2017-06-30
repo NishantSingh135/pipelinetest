@@ -53,4 +53,5 @@ This will build the project
  def unitTest(){
  	echo "current directory is :" + pwd()
  	bat "gradlew test"
+ 	junit '**/test-results/testDebugUnitTest/*.xml'
  }   
