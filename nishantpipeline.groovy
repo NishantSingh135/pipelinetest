@@ -8,17 +8,17 @@ checkout()
 log('checkout success')
 
 stage'Build' 
-echo 'Building....'
+log 'Building....'
     
 stage 'Test'  
-echo 'Building....'
+log 'Building....'
     
 stage 'Deploy'  
-echo 'Deploying....'
+log 'Deploying....'
 
 }
        
  def checkout(){  
- 	log ('in progress')
+ 	echo 'inside checkout method'
  }
     
