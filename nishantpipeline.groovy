@@ -2,7 +2,7 @@ REPOSITORY_URL="https://github.com/NishantSingh135/JenkinDemo"
 // Type of build
 BUILD_TYPE = 'BUILD_DEBUG';
 
-node('android_node'){
+node(){
 
 stage 'checkout'  
 echo('checking out source') 
